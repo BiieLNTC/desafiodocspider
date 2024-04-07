@@ -1,0 +1,236 @@
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.botao {
+    padding: 3px 10px;
+    border: none;
+    border-radius: 3px;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    color: white;
+    width: 100px;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.botao-adicionar {
+    background: #29d329;
+    margin: 80px auto;
+    margin: 0 auto;
+    margin: 20px 0px;
+    width: 110px;
+}
+
+.botao-adicionar:hover {
+    background: #1f9e1f;
+    transition: .3s;
+}
+
+.botao-download {
+    width: 30px;
+    border-radius: 50%;
+    height: 30px;
+}
+
+.botao-download svg {
+    flex-shrink: 0;
+}
+
+.conteudos {
+    flex-direction: column;
+    width: 80%;
+    display: flex;
+    margin: auto;
+}
+
+.grid {
+    width: 100%;
+}
+
+.modal-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    transition: 2s ease-in;
+}
+
+.header-modal {
+    background-color: #061f46;
+    width: 50%;
+    border-radius: 20px 20px 0px 0px;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    align-items: baseline;
+}
+
+.header-modal p {
+    margin: 10px 20px;
+}
+
+.modal-style {
+    background-color: rgb(233, 233, 233);
+    border: 3px solid #061f46;
+    animation: scaleIn 0.5s ease-in-out;
+    border-radius: 0px 0px 20px 20px;
+    width: 50%;
+}
+
+.inputs-modal {
+    display: flex;
+    padding: 15px;
+    flex-direction: column;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.form-group:last-child {
+    margin: 0px;
+}
+
+.botoes-acao {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+    gap: 15px;
+}
+
+.botoes-acao button:last-child {
+    background-color: #6e6e6e;
+}
+
+.botoes-acao button {
+    background-color: #061f46;
+}
+
+.botoes-acao button:hover {
+    background: #002f7a;
+    transition: .3s;
+}
+
+.botoes-acao button:last-child:hover {
+    background: #808080;
+    transition: .3s;
+}
+
+.botao-fechar-modal {
+    background: transparent;
+    color: white;
+    border: none;
+    box-shadow: none;
+    margin-right: 15px;
+    height: 20px;
+    width: 20px;
+    text-align: center;
+    line-height: 1;
+    border-radius: 50%;
+}
+
+.botao-fechar-modal:hover {
+    background-color: #0e326dc4;
+}
+
+#descricao {
+    resize: none;
+}
+
+.buttons-grid {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.icon-grid {
+    cursor: pointer;
+}
+
+.error-input {
+    color: #ff8300;
+    font-size: 15px;
+}
+
+td.description-cell {
+    max-width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+}
+
+.two-inputs-wrapper {
+    display: flex;
+    gap: 10px;
+    /* Espaço entre os inputs */
+}
+
+.two-inputs-wrapper input {
+    flex: 1;
+}
+
+.loader {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    position: relative;
+    animation: rotate 1s linear infinite
+}
+
+.loader::before {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    inset: 0px;
+    border-radius: 50%;
+    border: 5px solid #0e326dc4;
+    animation: prixClipFix 2s linear infinite;
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+@keyframes prixClipFix {
+    0% {
+        clip-path: polygon(50% 50%, 0 0, 0 0, 0 0, 0 0, 0 0)
+    }
+
+    25% {
+        clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 0, 100% 0, 100% 0)
+    }
+
+    50% {
+        clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 100% 100%, 100% 100%)
+    }
+
+    75% {
+        clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%)
+    }
+
+    100% {
+        clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 0)
+    }
+}
+
+.form-group-loader {
+    display: flex;
+    justify-content: center;
+}
