@@ -12,6 +12,7 @@ import { Loader } from './Loader';
 
 export const CadArquivo = ({ HandleValidSubmit, HandleFecharModal, isEdit, isView, arquivoId }) => {
 
+    const [id, setId] = useState(null);
     const [titulo, setTitulo] = useState(null);
     const [descricao, setDescricao] = useState(null);
     const [arquivo, setArquivo] = useState(null);
@@ -144,6 +145,7 @@ export const CadArquivo = ({ HandleValidSubmit, HandleFecharModal, isEdit, isVie
                 const base64String = await encodeFileToBase64(arquivo);
 
                 let arquivoObj = {
+                    id: id,
                     titulo: titulo,
                     descricao: descricao,
                     nomeArquivo: nomeArquivo,
