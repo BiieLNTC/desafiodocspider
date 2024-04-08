@@ -7,7 +7,6 @@ import { ConfirmarModal } from './ConfirmarModal';
 import { FaSave } from "react-icons/fa";
 import { IoMdDownload } from "react-icons/io";
 import { IoMdCloseCircle } from "react-icons/io";
-import { Tooltip } from 'react-tooltip';
 import { Loader } from './Loader';
 
 export const CadArquivo = ({ HandleValidSubmit, HandleFecharModal, isEdit, isView, arquivoId }) => {
@@ -34,12 +33,6 @@ export const CadArquivo = ({ HandleValidSubmit, HandleFecharModal, isEdit, isVie
 
         fetchData();
     }, []);
-
-    const ValidarCampos = () => {
-        setErroTitulo(titulo === null || titulo === '')
-        setErroDescricao(descricao === null || descricao === '')
-        setErroArquivo(!arquivo)
-    }
 
     return (
         <>
@@ -197,15 +190,12 @@ export const CadArquivo = ({ HandleValidSubmit, HandleFecharModal, isEdit, isVie
     function ObterModoCad() {
         let modo = ""
 
-        if (isEdit) {
+        if (isEdit)
             modo = "Editar";
-        }
-        else if (isView) {
+        else if (isView)
             modo = "Visualizar"
-        }
-        else {
+        else
             modo = "Cadastrar"
-        }
 
         return `${modo} Arquivo`
     }

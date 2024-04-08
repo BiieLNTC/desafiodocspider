@@ -3,6 +3,10 @@ p {
     padding: 0;
 }
 
+/* =================
+        BOTÕES
+   ================= */
+
 .botao {
     padding: 3px 10px;
     border: none;
@@ -39,70 +43,6 @@ p {
 
 .botao-download svg {
     flex-shrink: 0;
-}
-
-.conteudos {
-    flex-direction: column;
-    width: 80%;
-    display: flex;
-    margin: auto;
-}
-
-.grid {
-    width: 100%;
-}
-
-.modal-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    position: fixed;
-    z-index: 2;
-    top: 0;
-    left: 0;
-    transition: 2s ease-in;
-}
-
-.header-modal {
-    background-color: #061f46;
-    width: 50%;
-    border-radius: 20px 20px 0px 0px;
-    display: flex;
-    justify-content: space-between;
-    color: white;
-    align-items: baseline;
-}
-
-.header-modal p {
-    margin: 10px 20px;
-}
-
-.modal-style {
-    background-color: rgb(233, 233, 233);
-    border: 3px solid #061f46;
-    animation: scaleIn 0.5s ease-in-out;
-    border-radius: 0px 0px 20px 20px;
-    width: 50%;
-}
-
-.inputs-modal {
-    display: flex;
-    padding: 15px;
-    flex-direction: column;
-}
-
-.form-group {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 10px;
-}
-
-.form-group:last-child {
-    margin: 0px;
 }
 
 .botoes-acao {
@@ -147,6 +87,97 @@ p {
     background-color: #0e326dc4;
 }
 
+/* =================
+         MODAL
+   ================= */
+
+.modal-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    transition: 2s ease-in;
+}
+
+.header-modal {
+    background-color: #061f46;
+    width: 50%;
+    border-radius: 20px 20px 0px 0px;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    align-items: baseline;
+}
+
+.modal-style {
+    background-color: rgb(233, 233, 233);
+    border: 3px solid #061f46;
+    animation: scaleIn 0.5s ease-in-out;
+    border-radius: 0px 0px 20px 20px;
+    width: 50%;
+}
+
+.header-modal p {
+    margin: 10px 20px;
+}
+
+.inputs-modal {
+    display: flex;
+    padding: 15px;
+    flex-direction: column;
+}
+
+.conteudos {
+    flex-direction: column;
+    width: 80%;
+    display: flex;
+    margin: auto;
+}
+
+.error-input {
+    color: #ff8300;
+    font-size: 15px;
+}
+
+/* =================
+    ESTRUTURAS CAD
+   ================= */
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.form-group:last-child {
+    margin: 0px;
+}
+
+.two-inputs-wrapper {
+    display: flex;
+    gap: 10px;
+    /* Espaço entre os inputs */
+}
+
+.two-inputs-wrapper input {
+    flex: 1;
+}
+
+/* =================
+        GRID
+   ================= */
+
+.grid {
+    width: 100%;
+}
+
 #descricao {
     resize: none;
 }
@@ -161,11 +192,6 @@ p {
     cursor: pointer;
 }
 
-.error-input {
-    color: #ff8300;
-    font-size: 15px;
-}
-
 td.description-cell {
     max-width: 200px;
     white-space: nowrap;
@@ -174,15 +200,14 @@ td.description-cell {
 
 }
 
-.two-inputs-wrapper {
-    display: flex;
-    gap: 10px;
-    /* Espaço entre os inputs */
+.procurar-grid {
+    max-width: 300px;
+    margin-bottom: 25px;
 }
 
-.two-inputs-wrapper input {
-    flex: 1;
-}
+/* =================
+        LOADER
+   ================= */
 
 .loader {
     width: 48px;
@@ -233,9 +258,4 @@ td.description-cell {
 .form-group-loader {
     display: flex;
     justify-content: center;
-}
-
-.procurar-grid {
-    max-width: 300px;
-    margin-bottom: 25px;
 }

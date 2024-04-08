@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Grid } from './components/Grid';
@@ -32,10 +32,16 @@ function App() {
         </div>
       </div>
 
-      {visibilityCad && <CadArquivo HandleValidSubmit={OnValidSubmit} HandleFecharModal={HandleFecharModal} isEdit={isEditMode} isView={isViewMode} arquivoId={arquivoId} />}
+      {visibilityCad &&
+        <CadArquivo HandleValidSubmit={OnValidSubmit} HandleFecharModal={HandleFecharModal} isEdit={isEditMode} isView={isViewMode} arquivoId={arquivoId} />
+      }
 
-      {visibilityConfirmarModal &&
-        <ConfirmarModal AcaoConfirmacao={DeleteArquivo} HandleFecharModal={AlterarVisibilidadeModalConfirmacao} DadoParaConfirmacao={dadoParaExcluir} MensagemModal={"Deseja excluir esse registro?"} />}
+      {
+        visibilityConfirmarModal &&
+        <ConfirmarModal AcaoConfirmacao={DeleteArquivo} HandleFecharModal={AlterarVisibilidadeModalConfirmacao}
+          DadoParaConfirmacao={dadoParaExcluir} MensagemModal={"Deseja excluir esse registro?"}
+        />
+      }
 
       <ToastContainer theme='light' position="bottom-right" />
     </>
