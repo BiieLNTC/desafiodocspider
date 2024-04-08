@@ -17,6 +17,7 @@ export const CadArquivo = ({ HandleValidSubmit, HandleFecharModal, isEdit, isVie
     const [descricao, setDescricao] = useState(null);
     const [arquivo, setArquivo] = useState(null);
     const [arquivoBase64, setArquivoBase64] = useState(null);
+    const [dataCriacao, setDataCriacao] = useState();
     const [nomeArquivo, setNomeArquivo] = useState('');
     const [visibilityModalErro, setVisibilityModalErro] = useState();
     const [onInitializedCompleted, setOnInitializedCompleted] = useState(false)
@@ -149,7 +150,7 @@ export const CadArquivo = ({ HandleValidSubmit, HandleFecharModal, isEdit, isVie
                     titulo: titulo,
                     descricao: descricao,
                     nomeArquivo: nomeArquivo,
-                    dataCriacao: new Date(Date.now()),
+                    dataCriacao: dataCriacao,
                     conteudo: base64String
                 };
 
@@ -216,6 +217,7 @@ export const CadArquivo = ({ HandleValidSubmit, HandleFecharModal, isEdit, isVie
         setNomeArquivo(data.nomeArquivo)
         setArquivo(base64ToBlob(data.conteudo))
         setArquivoBase64(data.conteudo)
+        setDataCriacao(data.dataCriacao)
     }
 
 };
