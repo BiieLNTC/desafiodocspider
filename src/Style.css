@@ -234,3 +234,8 @@ td.description-cell {
     display: flex;
     justify-content: center;
 }
+
+.procurar-grid {
+    max-width: 300px;
+    margin-bottom: 25px;
+}
