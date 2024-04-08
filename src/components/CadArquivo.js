@@ -12,7 +12,7 @@ import { Loader } from './Loader';
 
 export const CadArquivo = ({ HandleValidSubmit, HandleFecharModal, isEdit, isView, arquivoId }) => {
 
-    const [id, setId] = useState(null);
+    const [id, setId] = useState(0);
     const [titulo, setTitulo] = useState(null);
     const [descricao, setDescricao] = useState(null);
     const [arquivo, setArquivo] = useState(null);
@@ -210,6 +210,7 @@ export const CadArquivo = ({ HandleValidSubmit, HandleFecharModal, isEdit, isVie
     }
 
     function MontarArquivoObj(data) {
+        setId(data.id)
         setTitulo(data.titulo)
         setDescricao(data.descricao)
         setNomeArquivo(data.nomeArquivo)
